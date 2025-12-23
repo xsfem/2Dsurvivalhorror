@@ -1,0 +1,124 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1766472929
+female-zombie-screams-324744.mp3::AudioStreamMP3::8846329474059413111::1766472129::1766472129::1::::<><><>0<>0<>4029aaee94d1e55af2c41628183d4c06<>res://.godot/imported/female-zombie-screams-324744.mp3-a343fea59746e10ff6270755fcd78bdb.mp3str::
+gpunk.gd::GDScript::3185280469446756522::1766472129::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Gpunk.tscn::PackedScene::4206472830374263371::1766472129::0::1::::<><><>0<>0<><>::uid://dtfqsjfahjaen::::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Attack_2.png<>uid://blm8dsf52cxh7::::res://gpunk.gd<>uid://dkwdn0csw3xye::::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Attack_3.png<>uid://dyfl6p8spe0d::::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Idle.png<>uid://cnswhldaxuqwe::::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Jump.png<>uid://duk8ngta24q5g::::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Run.png<>uid://dkvwia8qb5xir::::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Walk.png
+icon.svg::CompressedTexture2D::3529103694903960396::1766472129::1766472129::1::::<><><>0<>0<>1882986484b5e8af4e14423e6ec3afd0<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::5508859241908231412::1766472129::0::1::::<><><>0<>0<><>::uid://cawl405tpgvx1::::res://Sidescroller Shooter - Central City/Assets/Tiles.png<>uid://jltkoiq26ds6::::res://Sidescroller Shooter - Central City/Assets/Buildings.png<>uid://c16uua3us8176::::res://Sidescroller Shooter - Central City/Assets/Props-01.png<>uid://b06v803vlkyvb::::res://Gpunk.tscn<>uid://b3ysl5jerwmaj::::res://zombie1.tscn<>uid://bo7wm1d65ph3d::::res://Sidescroller Shooter - Central City/Background/Base Color.png
+zombie1.tscn::PackedScene::4402367511067274681::1766472129::0::1::::<><><>0<>0<><>::uid://bh7i83qnemfkn::::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_2/Attack.png<>uid://dttrej2pkd31n::::res://zombie_1.gd<>uid://4q1q6akmubp7::::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_2/Dead.png<>uid://g3aejl7t2bgw::::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_2/Hurt.png<>uid://tix4rbr10ihw::::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_2/Idle.png<>uid://dyj47tweobofe::::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_2/Walk.png<>uid://dybh0vufb837p::::res://female-zombie-screams-324744.mp3
+zombie_1.gd::GDScript::8533113104696620105::1766472129::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://addons/::1766472129
+::res://addons/polygon2d_tool/::1766472129
+icon.svg::CompressedTexture2D::4162479482386078027::1766472129::1766472931::1::::<><><>0<>0<>5d12d0a8331ef043d1dbba3a5a0c0df3<>res://.godot/imported/icon.svg-8ef80d76d2fb82ae5d192daa493796cd.ctex::
+plugin.cfg::TextFile::-1::1766472129::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::8318635242387796464::1766472129::0::1::::<>EditorPlugin<><>0<>1<><>::
+polygon_2d_tool.gd::GDScript::2661870397120703683::1766472129::0::1::::PolygonTool2D<>RefCounted<>res://addons/polygon2d_tool/icon.svg<>0<>1<><>::
+::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/::1766472129
+COUPON.png::CompressedTexture2D::6038725302807142489::1766472129::1766472129::1::::<><><>0<>0<>72f3597c5d7b49f06d62e734cfd9eefc<>res://.godot/imported/COUPON.png-2695c28a51c5e0edbba4cf4aeea39df9.ctex::
+Font.txt::TextFile::-1::1766472129::0::1::::<><><>0<>0<><>::
+Licens.txt::TextFile::-1::1766472129::0::1::::<><><>0<>0<><>::
+::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/PSD/::1766472129
+::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_1/::1766472129
+Attack.png::CompressedTexture2D::5658939074572949832::1766472129::1766472129::1::::<><><>0<>0<>8f1a9c1001337039cf793c4f639abda0<>res://.godot/imported/Attack.png-41ea4b3f4f6ae6c9781e26833aaff02d.ctex::
+Dead.png::CompressedTexture2D::2346837624122901926::1766472129::1766472129::1::::<><><>0<>0<>de108fd0be238b60cb064d8028560ea9<>res://.godot/imported/Dead.png-9a3a9c612073ba2f66e0714085db4588.ctex::
+Hurt.png::CompressedTexture2D::7480605600790325274::1766472129::1766472129::1::::<><><>0<>0<>af55f8053bdfcf40131f01e51db695df<>res://.godot/imported/Hurt.png-aba92852e1066535afc4c087bc5cdb21.ctex::
+Idle.png::CompressedTexture2D::3782660634178486949::1766472129::1766472129::1::::<><><>0<>0<>32a5bea86990583b4df4d37c4291b16d<>res://.godot/imported/Idle.png-58f3ea3c72f5aea2051852b6ead64a03.ctex::
+Walk.png::CompressedTexture2D::3955661608365486411::1766472129::1766472129::1::::<><><>0<>0<>12a08a305387abb594943f2cec0f98f0<>res://.godot/imported/Walk.png-4884981bf53701d95a47fa1cd0ac5d71.ctex::
+::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_2/::1766472129
+Attack.png::CompressedTexture2D::2944348840397392181::1766472129::1766472129::1::::<><><>0<>0<>11952ebe993d53c65621ea4577713330<>res://.godot/imported/Attack.png-05b6a6b6ff7bead180210b62ceb46a09.ctex::
+Dead.png::CompressedTexture2D::2070115352777334466::1766472129::1766472129::1::::<><><>0<>0<>108e45d58188c8460d7320f3fe2d8d21<>res://.godot/imported/Dead.png-b071f717ac4fb8a3677f231de9230120.ctex::
+Hurt.png::CompressedTexture2D::478943273300874030::1766472129::1766472129::1::::<><><>0<>0<>e460de42d2694b7eb466957b06fd5ecc<>res://.godot/imported/Hurt.png-a3734c53b4b0af4b44ce62388b415d48.ctex::
+Idle.png::CompressedTexture2D::1351552225261860076::1766472129::1766472129::1::::<><><>0<>0<>32ca89a703fb84bf78a1f91468104d17<>res://.godot/imported/Idle.png-e473e5fb82937b33503c223977a0e964.ctex::
+Walk.png::CompressedTexture2D::8864192668503658446::1766472129::1766472129::1::::<><><>0<>0<>d924f86dc5b63114e7a55da8a4431aa4<>res://.godot/imported/Walk.png-83f1816a66e84e558582b403b6ef9c8d.ctex::
+::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_3/::1766472129
+Attack.png::CompressedTexture2D::8829877329894080579::1766472129::1766472129::1::::<><><>0<>0<>95641ad44f64ee667ef6efd0a949a554<>res://.godot/imported/Attack.png-cbf03974dce36f3f68eb5ba508eeee58.ctex::
+Dead.png::CompressedTexture2D::2071601329834710884::1766472129::1766472129::1::::<><><>0<>0<>4d1b2454ab27bb708caa3382d6f96722<>res://.godot/imported/Dead.png-6c7c730ce00f0c7964e51038cde54072.ctex::
+Hurt.png::CompressedTexture2D::6762513882043713073::1766472129::1766472129::1::::<><><>0<>0<>6f9d8c159cad0edd590cbc02a2320be2<>res://.godot/imported/Hurt.png-d692da152b2aa9e82c0efd5e47e8b934.ctex::
+Walk.png::CompressedTexture2D::599358357954499261::1766472129::1766472129::1::::<><><>0<>0<>0bb8ed3f0c8cd7bee2831dc2dc6b0ad5<>res://.godot/imported/Walk.png-353a84c163d096a2e7a3a86d44432c5b.ctex::
+::res://Free-Urban-Zombie-Sprite-Sheet-Pixel-Art-Pack/Zombie_4/::1766472129
+Attack.png::CompressedTexture2D::1487071406137585890::1766472129::1766472129::1::::<><><>0<>0<>f3501560816bb8cd62eb345e3457d89f<>res://.godot/imported/Attack.png-5c4e1849fabe5b8b8effd02e62a2476c.ctex::
+Dead.png::CompressedTexture2D::1307393010678090756::1766472129::1766472129::1::::<><><>0<>0<>232208763fb44613804a1deb9de1a098<>res://.godot/imported/Dead.png-fd2c019fa7e9154a8c6fcca8b6594ce8.ctex::
+Hurt.png::CompressedTexture2D::4202898931170170690::1766472129::1766472129::1::::<><><>0<>0<>6e82058d93fd28f759458b3355359be5<>res://.godot/imported/Hurt.png-4f598fc049d19638cd09a60ece1f4c87.ctex::
+Idle.png::CompressedTexture2D::8795326854734307139::1766472129::1766472129::1::::<><><>0<>0<>9c166d3a81b74853e580543cb3f2ca99<>res://.godot/imported/Idle.png-d3a9e150650535b5c654d512d4777e27.ctex::
+Walk.png::CompressedTexture2D::7212629398230918442::1766472129::1766472129::1::::<><><>0<>0<>aefd2c25333c95b4291fd582f76f11c0<>res://.godot/imported/Walk.png-4a6c8252c8baba436a647769a068f557.ctex::
+::res://gangster-pixel-character-sprite-sheets-pack/::1766472129
+COUPON.png::CompressedTexture2D::2464177446078900352::1766472129::1766472129::1::::<><><>0<>0<>d58cdffbe60af264a2d99b0f314f965e<>res://.godot/imported/COUPON.png-0a6098859d368c77bc6d4c4f129bdf0e.ctex::
+Font.txt::TextFile::-1::1766472129::0::1::::<><><>0<>0<><>::
+Licens.txt::TextFile::-1::1766472129::0::1::::<><><>0<>0<><>::
+::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_1/::1766472129
+Attack_1.png::CompressedTexture2D::8928733698872611434::1766472129::1766472129::1::::<><><>0<>0<>51f3581fe3ca8368f9eab4ee8cc84791<>res://.godot/imported/Attack_1.png-1163e837429880c63351d1b21606b7db.ctex::
+Dead.png::CompressedTexture2D::463415654105179412::1766472129::1766472129::1::::<><><>0<>0<>4b205c656353d6133d660cd13e843929<>res://.godot/imported/Dead.png-cef6438f5bf8c140ea02a49be6255b23.ctex::
+Hurt.png::CompressedTexture2D::5407910223592459054::1766472129::1766472129::1::::<><><>0<>0<>255c515830956a294b8b5fed098cc30a<>res://.godot/imported/Hurt.png-29e53b0975d98637e28401368c75bbc0.ctex::
+Idle.png::CompressedTexture2D::6057011840175164478::1766472129::1766472129::1::::<><><>0<>0<>b3306c079e5301db223a37ca022451b8<>res://.godot/imported/Idle.png-075cc4319d1928c1738feb218ac3c4ac.ctex::
+Idle_2.png::CompressedTexture2D::4652357243567475360::1766472129::1766472129::1::::<><><>0<>0<>1c6a28ccfe6715df8fe9d514beda7d9e<>res://.godot/imported/Idle_2.png-c881b78970ef1596f71e4b54d8ffde26.ctex::
+Jump.png::CompressedTexture2D::856958330413242297::1766472129::1766472129::1::::<><><>0<>0<>7d655ecc04b4f70b6980ab82850ef8d3<>res://.godot/imported/Jump.png-e7710839ecaeec0ec669209a17c8eff9.ctex::
+Recharge.png::CompressedTexture2D::9119764793597020248::1766472129::1766472129::1::::<><><>0<>0<>46c7a41b3acd8214da1cc7b58aecca6c<>res://.godot/imported/Recharge.png-dfa860c0666a9749f55d73ecb7da606e.ctex::
+Run.png::CompressedTexture2D::8491543954825981545::1766472129::1766472129::1::::<><><>0<>0<>ead902bbbfacd5074efa1716314ee230<>res://.godot/imported/Run.png-74a427700ab2dc1a3d8eb174a6aca66c.ctex::
+Shot.png::CompressedTexture2D::1797305611539773746::1766472129::1766472129::1::::<><><>0<>0<>94323d20c6cb664118621ebfa97626f1<>res://.godot/imported/Shot.png-95bfc3ae6f171472fb67b67909ac674c.ctex::
+Walk.png::CompressedTexture2D::5483696363756574357::1766472129::1766472129::1::::<><><>0<>0<>794c8b5c673bddc0927df7597d84fd0f<>res://.godot/imported/Walk.png-730278941f8164bd32e13bdc70d549f4.ctex::
+::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/::1766472129
+Attack_1.png::CompressedTexture2D::331962428638109348::1766472129::1766472129::1::::<><><>0<>0<>bfdc7c11f3a3d9bd235e7a0b78481490<>res://.godot/imported/Attack_1.png-dbc0c7b260df3a4ddce3ff02102f4cd2.ctex::
+Attack_2.png::CompressedTexture2D::8504176065590650509::1766472129::1766472129::1::::<><><>0<>0<>65fa5c3fbd6f0947d107c610e72b432d<>res://.godot/imported/Attack_2.png-e58c3eb3db89b369772610eb4fb2a104.ctex::
+Attack_3.png::CompressedTexture2D::7906773481369732496::1766472129::1766472129::1::::<><><>0<>0<>5806641098163351ef38406fc8b2ff92<>res://.godot/imported/Attack_3.png-4721ccbf304e329e6807efa2ceab3bf2.ctex::
+Dead.png::CompressedTexture2D::5023525998408177043::1766472129::1766472129::1::::<><><>0<>0<>3593f154bcfad5f9518697162822269f<>res://.godot/imported/Dead.png-a3f7908e3e1172d4eb9e8cbeb9dde30b.ctex::
+Hurt.png::CompressedTexture2D::7923458868271371911::1766472129::1766472129::1::::<><><>0<>0<>4dd702c1326c2682d99b5dddef731a50<>res://.godot/imported/Hurt.png-d85dcc5c0640d1bc0a7ca9c40db140db.ctex::
+Idle.png::CompressedTexture2D::260436478628256733::1766472129::1766472129::1::::<><><>0<>0<>f015593cc3f854a252f01940a024c29a<>res://.godot/imported/Idle.png-023a70985225e9537b16813482f5b97d.ctex::
+Idle_2.png::CompressedTexture2D::2294779361112872685::1766472129::1766472129::1::::<><><>0<>0<>54e4f6a359fe73fff50679141e2658f3<>res://.godot/imported/Idle_2.png-89535fb22bf3e3564926590d2d8d6235.ctex::
+Jump.png::CompressedTexture2D::5723803991074701440::1766472129::1766472129::1::::<><><>0<>0<>70be2d9fe84edb44e7957547a4875a92<>res://.godot/imported/Jump.png-274da36477c593c02e35f5db3cd3a97b.ctex::
+Run.png::CompressedTexture2D::8585709921991230746::1766472129::1766472129::1::::<><><>0<>0<>3caa3cc31d57d6e2799b75fff136a264<>res://.godot/imported/Run.png-1efdbd3e6d5b1927171dac657dad4b04.ctex::
+Walk.png::CompressedTexture2D::7905852532195038525::1766472129::1766472129::1::::<><><>0<>0<>e9355ce94c7ccc0decdf0ae6dbf44a60<>res://.godot/imported/Walk.png-26e23a54d13576dda436a343d6dcafd9.ctex::
+::res://gangster-pixel-character-sprite-sheets-pack/Gangsters_3/::1766472129
+Attack.png::CompressedTexture2D::6660847211313865777::1766472129::1766472129::1::::<><><>0<>0<>75a72f4a81bfa7661f472896fb8609fe<>res://.godot/imported/Attack.png-f963f5ea4a3c410d25c858c0f6a8e4eb.ctex::
+Dead.png::CompressedTexture2D::4475995276063271591::1766472129::1766472129::1::::<><><>0<>0<>ea3894cd24808e43684bb0efc016403a<>res://.godot/imported/Dead.png-be3bdb612f1255fdec919a394d71113d.ctex::
+Hurt.png::CompressedTexture2D::2655854154183742717::1766472129::1766472129::1::::<><><>0<>0<>0280dcb2ba27c64e66e8c9059bd7575c<>res://.godot/imported/Hurt.png-6a139db66aa383dd41a68b846e0baeec.ctex::
+Idle.png::CompressedTexture2D::8097597088527278215::1766472129::1766472129::1::::<><><>0<>0<>9fb1366dfbd1124ea3186f48066a7837<>res://.godot/imported/Idle.png-b551a31359a454fa8efef9b6d2babaa5.ctex::
+Idle_2.png::CompressedTexture2D::3087111668112106445::1766472129::1766472129::1::::<><><>0<>0<>6a615a06cd6897cc67df3f602b3a4825<>res://.godot/imported/Idle_2.png-3e9503cbfd487b9e01d0dda1bcd7d061.ctex::
+Jump.png::CompressedTexture2D::7943709859785561586::1766472129::1766472129::1::::<><><>0<>0<>a2c7b7cc0a42a29ea4f4f86ce83a4ad7<>res://.godot/imported/Jump.png-505693d1fa9930ffa39d0cdcbd6c5f85.ctex::
+Recharge.png::CompressedTexture2D::201257805413578104::1766472129::1766472129::1::::<><><>0<>0<>bf98cef52cd065e411bf60a534e7e576<>res://.godot/imported/Recharge.png-4c0323bfa74fc307d67f16d5d4cc9f4b.ctex::
+Run.png::CompressedTexture2D::8472662426130442014::1766472129::1766472129::1::::<><><>0<>0<>1042d357f6c58eace7853483c819adf5<>res://.godot/imported/Run.png-7961684a563422618019bb150154997d.ctex::
+Shot.png::CompressedTexture2D::6849466147648473042::1766472129::1766472129::1::::<><><>0<>0<>668d8dfaa6dc6df761449f6a19bf4740<>res://.godot/imported/Shot.png-9e0a8d112e27e08822c3d195c8e7d029.ctex::
+Walk.png::CompressedTexture2D::4837187086378636697::1766472129::1766472129::1::::<><><>0<>0<>0616047b9404eeeabcb650d4efb046a3<>res://.godot/imported/Walk.png-5b2005ff036243cf14d817315d97c5a1.ctex::
+::res://gangster-pixel-character-sprite-sheets-pack/PSD/::1766472129
+::res://Sidescroller Shooter - Central City/::1766472129
+::res://Sidescroller Shooter - Central City/Assets/::1766472129
+Buildings.png::CompressedTexture2D::655579977288168503::1766472129::1766472129::1::::<><><>0<>0<>d49c2d395b550293f0abfe3b3bf9e332<>res://.godot/imported/Buildings.png-ffe79540578cecdcb06369b2b4f4edc5.ctex::
+Props-01.png::CompressedTexture2D::6662997112272938735::1766472129::1766472129::1::::<><><>0<>0<>7d73e64879d5b42e27cf361429d9edeb<>res://.godot/imported/Props-01.png-f64f39b09254532fce9584ed48212b4b.ctex::
+Tiles.png::CompressedTexture2D::4818978713230655356::1766472129::1766472129::1::::<><><>0<>0<>19fc90c0fc44b8775f8e9e5bf6ac7ab5<>res://.godot/imported/Tiles.png-325d372eed35c36d0b9f0caf823100df.ctex::
+::res://Sidescroller Shooter - Central City/Background/::1766472129
+Background Props.png::CompressedTexture2D::7483854753450355374::1766472129::1766472129::1::::<><><>0<>0<>df92d3601b4c3674c342ddc592b44a0a<>res://.godot/imported/Background Props.png-bb8137b3dbd71c04845fd9c72bd0f0e0.ctex::
+Base Color.png::CompressedTexture2D::3436483157813892047::1766472129::1766472129::1::::<><><>0<>0<>02fb420320d1d4c35c265598dcff61eb<>res://.godot/imported/Base Color.png-70fc00e12dd349207469e47833de256f.ctex::
+Frontal Fog.png::CompressedTexture2D::2521442146863801985::1766472129::1766472129::1::::<><><>0<>0<>178a456a5df9e62e27576e991d75e484<>res://.godot/imported/Frontal Fog.png-6b16f734403c364825aa0b034db78bac.ctex::
+Mid Fog.png::CompressedTexture2D::3470802116197026426::1766472129::1766472129::1::::<><><>0<>0<>7994a3a0ed5c11c77363fa6afc12a565<>res://.godot/imported/Mid Fog.png-2804e3d741feac7a137fe2b9eded6b7a.ctex::
+::res://Sidescroller Shooter - Central City/Social/::1766472129
+Background Props.png::CompressedTexture2D::7517257308512182919::1766472129::1766472129::1::::<><><>0<>0<>6d0345af6ddd6f4871712b691e92211d<>res://.godot/imported/Background Props.png-0f3d8c50d6affdac787a9f1a2aebb54b.ctex::
+Buildings.png::CompressedTexture2D::4744153467046751068::1766472129::1766472129::1::::<><><>0<>0<>02257d255075a94a09624e95745e158f<>res://.godot/imported/Buildings.png-04cf274f4b00f913a6caa318b4f976a0.ctex::
+MockUp-01.png::CompressedTexture2D::2024864748014974389::1766472129::1766472129::1::::<><><>0<>0<>b93904865f432bf0f2aa1a7516caf980<>res://.godot/imported/MockUp-01.png-7e1b19fcd29b8551c9bd2b22d9fd14e8.ctex::
+Props-01.png::CompressedTexture2D::6536199343526541494::1766472129::1766472129::1::::<><><>0<>0<>fdfcefa130feac8584458ce75ca55594<>res://.godot/imported/Props-01.png-9f331df2f438ad37f9fb66a62416c46d.ctex::
+Tiles.png::CompressedTexture2D::7660446067660992438::1766472129::1766472129::1::::<><><>0<>0<>0aceb9a562aa80e5737e95b8b27e7947<>res://.godot/imported/Tiles.png-97dc29285f9232cca0a6c843bf7bf71b.ctex::
+::res://The Dawn/::1766472129
+Reference-Image.png::CompressedTexture2D::150210279350590456::1766472129::1766472129::1::::<><><>0<>0<>47d667f703c7dde78a797aa362239b39<>res://.godot/imported/Reference-Image.png-59a338a9939822bdf90cf030c481bd49.ctex::
+::res://The Dawn/Layers/::1766472129
+1.png::CompressedTexture2D::7360721213119767330::1766472129::1766472129::1::::<><><>0<>0<>94339d504a8d91c777575cb97d36d22d<>res://.godot/imported/1.png-994e2c04bc386c12aa4548adbf28a5b8.ctex::
+2.png::CompressedTexture2D::2746362407029676758::1766472129::1766472129::1::::<><><>0<>0<>fa6f044d10d87855e6b43a689a69d394<>res://.godot/imported/2.png-ed9a6aa39f1c350c6ca5b49f24d9aef8.ctex::
+3.png::CompressedTexture2D::7056760502591264421::1766472129::1766472129::1::::<><><>0<>0<>e54b88a1c45ffdccb2d37af14aa16b5b<>res://.godot/imported/3.png-a467c057f7e8e2ea98b222b9833c717f.ctex::
+4.png::CompressedTexture2D::3989878092988118868::1766472129::1766472129::1::::<><><>0<>0<>6af64f2e443d379b32d770c1da522778<>res://.godot/imported/4.png-e8292171b70000bedf1a7b4d11de50a7.ctex::
+5.png::CompressedTexture2D::7108927714962932445::1766472129::1766472129::1::::<><><>0<>0<>912713088fe2e884381b64a49aaf1172<>res://.godot/imported/5.png-b0963a33fb296f7c40d7110adeaecf66.ctex::
+6.png::CompressedTexture2D::3840849824630190245::1766472129::1766472129::1::::<><><>0<>0<>0b94ff7b2466eddb621ce895cc1f6836<>res://.godot/imported/6.png-bdea1fa215ca87da41b392cab7d552bf.ctex::
+7.png::CompressedTexture2D::8360547496280010225::1766472129::1766472129::1::::<><><>0<>0<>e80e08fda054caf923a63940430e4830<>res://.godot/imported/7.png-86218ae79b90082a012c51e4eea70631.ctex::
+8.png::CompressedTexture2D::3292748626341498069::1766472129::1766472129::1::::<><><>0<>0<>9383ebffbb4dcb4a8315599247c76038<>res://.godot/imported/8.png-c5fd72449a35bc17f180b5016998a0ee.ctex::
+::res://The Dawn/Layers/Sidescroller Shooter - Central City/::1766472129
+::res://The Dawn/Layers/Sidescroller Shooter - Central City/Assets/::1766472129
+Buildings.png::CompressedTexture2D::8003150554762135894::1766472129::1766472129::1::::<><><>0<>0<>f6406b00d64322605e5252cc3f09cd78<>res://.godot/imported/Buildings.png-999b98b13ad73466ed0be106f4f0874d.ctex::
+Props-01.png::CompressedTexture2D::3355723434357585152::1766472129::1766472129::1::::<><><>0<>0<>19ad057465e1ee0c8f34afc2ec8f64be<>res://.godot/imported/Props-01.png-02243474883d8838ab8cd79588c2db2b.ctex::
+Tiles.png::CompressedTexture2D::1490377764913594768::1766472129::1766472129::1::::<><><>0<>0<>52186da418de02ebcba10f4770f03d63<>res://.godot/imported/Tiles.png-5ef7b220d6024278b21ef72a54e85812.ctex::
+::res://The Dawn/Layers/Sidescroller Shooter - Central City/Background/::1766472129
+Background Props.png::CompressedTexture2D::607460285879856870::1766472129::1766472129::1::::<><><>0<>0<>1922fd310cc51782cec9871c0e80a3ca<>res://.godot/imported/Background Props.png-3e377b093c4025c5007d98b8f847acaa.ctex::
+Base Color.png::CompressedTexture2D::6715121889630322902::1766472129::1766472129::1::::<><><>0<>0<>90b61e65ee2f300dbf1de55e486f8e38<>res://.godot/imported/Base Color.png-11011e611556b45dcdca2ac3a20aa98f.ctex::
+Frontal Fog.png::CompressedTexture2D::4184352566064423201::1766472129::1766472129::1::::<><><>0<>0<>926e12afd231abe5fe91c8a3e8bfbe27<>res://.godot/imported/Frontal Fog.png-4b060012a126d4cc996138c0eb3de421.ctex::
+Mid Fog.png::CompressedTexture2D::6364895177753886781::1766472129::1766472129::1::::<><><>0<>0<>f6b4b5323e01f9449e0b01854561f8fe<>res://.godot/imported/Mid Fog.png-0ad1baea3ce3f7a92247a38c6fa91cd6.ctex::
+::res://The Dawn/Layers/Sidescroller Shooter - Central City/Social/::1766472129
+Background Props.png::CompressedTexture2D::5920686635888102782::1766472129::1766472129::1::::<><><>0<>0<>75cd97506bc0281e8e7eaf7185ebce96<>res://.godot/imported/Background Props.png-d5fe90d0a474cd0493ad6baf4ffe925c.ctex::
+Buildings.png::CompressedTexture2D::6982550447400151257::1766472129::1766472129::1::::<><><>0<>0<>e057e801b34d782b5fa5f62979bdfc90<>res://.godot/imported/Buildings.png-f67047830c4c5fa37f27bd3ad7331dd4.ctex::
+MockUp-01.png::CompressedTexture2D::8699523572976960971::1766472129::1766472129::1::::<><><>0<>0<>2f4a6e6e57c7b0919b3c8d2d5fde0b4f<>res://.godot/imported/MockUp-01.png-96a74c369158042064e2e4c506ef16ea.ctex::
+Props-01.png::CompressedTexture2D::4262006845511717535::1766472129::1766472129::1::::<><><>0<>0<>0d308d29058b7e499887fb5851057d16<>res://.godot/imported/Props-01.png-b8943f181ac548393b2dd317d4cccfdb.ctex::
+Tiles.png::CompressedTexture2D::373373418065400173::1766472129::1766472129::1::::<><><>0<>0<>a253ce457f2ecf12e4d5cb3fee949e4d<>res://.godot/imported/Tiles.png-97ce5ab0e6f0185f931321d9bf8a5025.ctex::
