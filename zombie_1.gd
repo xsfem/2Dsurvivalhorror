@@ -5,7 +5,7 @@ const CHASE_SPEED = 50.0
 const DETECTION_RANGE = 300.0
 
 # Параметры атаки
-@export var attack_damage = 100
+@export var attack_damage = 25
 
 # Здоровье
 @export var max_health = 100
@@ -167,7 +167,7 @@ func attack():
 		print("ОШИБКА: player = null")
 	
 	# Перезарядка
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1).timeout
 	can_attack = true
 
 func die():

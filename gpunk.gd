@@ -136,15 +136,15 @@ func take_damage(damage: int):
 	
 	current_health -= damage
 	
-	#is_hurt = true
-	#velocity.x = 0  # Останавливаем движение
+	is_hurt = true
+	velocity.x = 0  # Останавливаем движение
 	
 	# Проигрываем анимацию урона
 	anim_sprite.play("Hurt")
-	#await anim_sprite.animation_finished
+	await get_tree().create_timer(0.5).timeout
 	
 	# Возвращаем управление
-	#is_hurt = false
+	is_hurt = false
 	print("Игрок получил урон: ", damage, " Здоровье: ", current_health)
 	
 	if current_health <= 0:

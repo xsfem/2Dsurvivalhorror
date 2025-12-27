@@ -148,7 +148,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
-"speed": 4.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -264,7 +264,7 @@ script = ExtResource("1_nyjei")
 position = Vector2(2, -64)
 sprite_frames = SubResource("SpriteFrames_fjscq")
 animation = &"Attack"
-frame_progress = 0.22634743
+frame_progress = 0.9642191
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -28)
@@ -288,7 +288,7 @@ scale = Vector2(0.99999994, 0.99999994)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(-35.714294, -48.571434)
+position = Vector2(-25.714289, -48.571434)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_4xkcb")
 debug_color = Color(0.85393053, 1.0973811e-05, 0.56958693, 0.41960785)

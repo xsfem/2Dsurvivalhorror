@@ -480,7 +480,7 @@ script = ExtResource("1_d4lcm")
 position = Vector2(1.4285715, -64.28571)
 sprite_frames = SubResource("SpriteFrames_4gv1r")
 animation = &"Hurt"
-frame_progress = 0.9933024
+frame_progress = 0.541171
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.1920929e-07, -28.57143)
