@@ -274,6 +274,7 @@ shape = SubResource("CapsuleShape2D_238gw")
 position = Vector2(1.9999996, -63.99999)
 scale = Vector2(0.9999998, 0.9999998)
 stream = ExtResource("7_4xkcb")
+parameters/looping = true
 
 [node name="DetectionArea" type="Area2D" parent="."]
 scale = Vector2(0.99999994, 0.99999994)
@@ -287,7 +288,7 @@ scale = Vector2(0.99999994, 0.99999994)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(31.428574, -47.142857)
+position = Vector2(-35.714294, -48.571434)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_4xkcb")
 debug_color = Color(0.85393053, 1.0973811e-05, 0.56958693, 0.41960785)

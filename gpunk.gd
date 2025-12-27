@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 # Параметры движения
-const WALK_SPEED = 100.0
-const RUN_SPEED = 350.0
+const WALK_SPEED = 35.0
+const RUN_SPEED = 60.0
 const ACCELERATION = 1500.0
 const FRICTION = 1200.0
 
@@ -20,6 +20,7 @@ var attack_type = ""
 
 # Узлы
 @onready var anim_sprite = $AnimatedSprite2D
+@onready var attack_area = $AttackArea
 
 # Рандомайзер легких аттак анимаций
 var animations = ["Attack1", "Attack1_L"]

@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 # Параметры врага
-const CHASE_SPEED = 150.0
+const CHASE_SPEED = 50.0
 const DETECTION_RANGE = 300.0
 
 # Параметры атаки
-@export var attack_damage = 10
+@export var attack_damage = 50
 @export var attack_cooldown = 1.5
 
 # Здоровье
@@ -54,14 +54,23 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
+	# Отладочная информация
+	if player:
+		print("Игрок найден. is_chasing: ", is_chasing, " | player_in_attack_range: ", player_in_attack_range, " | can_attack: ", can_attack)
+	
 	# Если преследуем игрока
 	if is_chasing and player:
-		chase_player()
-	elif player and player_in_attack_range:
-		# Остановка и атака
-		velocity = Vector2.ZERO
-		if can_attack:
-			attack()
+		if player_in_attack_range:
+			# Остановка и атака
+			velocity.x = 0
+			print("УСЛОВИЕ АТАКИ ВЫПОЛНЕНО")
+			if can_attack:
+				print("ВЫЗОВ АТАКИ")
+				attack()
+			else:
+				print("НЕ МОГУ АТАКОВАТЬ - ПЕРЕЗАРЯДКА")
+		else:
+			chase_player()
 	else:
 		# Стоим на месте
 		velocity.x = move_toward(velocity.x, 0, 500 * delta)
@@ -115,12 +124,18 @@ func attack():
 	can_attack = false
 	
 	# Анимация атаки
-	if has_node("AnimatedSprite2D"):
-		anim_sprite.play("Attack")
+	anim_sprite.play("Attack")
 	
 	# Нанесение урона
-	if player and player.has_method("take_damage"):
-		player.take_damage(attack_damage)
+	if player:
+		print("Игрок существует")
+		if player.has_method("take_damage"):
+			player.take_damage(attack_damage)
+			print("Урон нанесён: ", attack_damage)
+		else:
+			print("ОШИБКА: У игрока НЕТ метода take_damage!")
+	else:
+		print("ОШИБКА: player = null")
 	
 	# Перезарядка
 	await get_tree().create_timer(attack_cooldown).timeout

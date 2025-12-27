@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://b06v803vlkyvb"]
+[gd_scene load_steps=75 format=3 uid="uid://b06v803vlkyvb"]
 
 [ext_resource type="Texture2D" uid="uid://dtfqsjfahjaen" path="res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Attack_2.png" id="1_3b6kj"]
 [ext_resource type="Script" uid="uid://blm8dsf52cxh7" path="res://gpunk.gd" id="1_d4lcm"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://duk8ngta24q5g" path="res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Run.png" id="5_sv8ua"]
 [ext_resource type="Texture2D" uid="uid://dk5ghexbe88n8" path="res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Hurt.png" id="5_y76gg"]
 [ext_resource type="Texture2D" uid="uid://dkvwia8qb5xir" path="res://gangster-pixel-character-sprite-sheets-pack/Gangsters_2/Walk.png" id="7_va3cn"]
+[ext_resource type="Script" uid="uid://qopofy074t3c" path="res://canvas_layer.gd" id="10_o1u4h"]
+[ext_resource type="Shader" uid="uid://catm1w4mlswp5" path="res://main.gdshader" id="11_d42tk"]
+[ext_resource type="Script" uid="uid://db44821rpichj" path="res://color_rect.gd" id="12_1cq8m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y76gg"]
 atlas = ExtResource("1_3b6kj")
@@ -453,11 +456,19 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pwlmg"]
 height = 52.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xm2qw"]
+shader = ExtResource("11_d42tk")
+shader_parameter/glitch_strength = 1.0
+shader_parameter/glitch_speed = 2.0
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_va3cn"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dbxoj"]
 particle_flag_disable_z = true
 gravity = Vector3(0, 98, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1u4h"]
+size = Vector2(20, 24.285713)
 
 [node name="Gpunk" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.7, 0.7)
@@ -482,6 +493,23 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 12.0
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+script = ExtResource("10_o1u4h")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="Camera2D/CanvasLayer"]
+copy_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+material = SubResource("ShaderMaterial_xm2qw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7087264, 1.5302441)
+color = Color(0.8690471, 0.0002525902, 0.78000444, 1)
+script = ExtResource("12_1cq8m")
+
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(1, 0.16470589, 0, 1)
 position = Vector2(7.1428576, -50)
@@ -490,3 +518,11 @@ lifetime = 0.19
 preprocess = 0.24
 speed_scale = 30.56
 process_material = SubResource("ParticleProcessMaterial_dbxoj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(24.285715, -45.714287)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_o1u4h")
+debug_color = Color(0.87509185, 0.08306367, 0.8087599, 0.41960785)
