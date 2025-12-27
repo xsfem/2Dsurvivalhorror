@@ -5,8 +5,7 @@ const CHASE_SPEED = 50.0
 const DETECTION_RANGE = 300.0
 
 # Параметры атаки
-@export var attack_damage = 50
-@export var attack_cooldown = 1.5
+@export var attack_damage = 100
 
 # Здоровье
 @export var max_health = 100
@@ -18,6 +17,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # Состояния
 var is_chasing = false
 var player = null
+var is_dead = false
 
 # Состояния атаки
 var can_attack = true
@@ -34,6 +34,11 @@ var player_in_attack_range = false
 
 func _ready():
 	
+	if is_dead:
+		return
+	
+	add_to_group("enemy")
+	
 	if detection_area:
 		print("DetectionArea найдена")
 		detection_area.body_entered.connect(_on_player_detected)
@@ -47,14 +52,19 @@ func _ready():
 		attack_area.body_exited.connect(_on_attack_area_exited)
 	else:
 		print("ОШИБКА: AttackArea не найдена!")
+		
 	
 
 func _physics_process(delta):
+	
+	if is_dead:
+		return
+	
 	# Применяем гравитацию
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	# Отладочная информация
+	# Отладочная информация 
 	if player:
 		print("Игрок найден. is_chasing: ", is_chasing, " | player_in_attack_range: ", player_in_attack_range, " | can_attack: ", can_attack)
 	
@@ -111,17 +121,36 @@ func _on_player_lost(body):
 		
 
 func _on_attack_area_entered(body):
-	if body.is_in_group("player") and body == player:
+	if body.is_in_group("player"):
+		player = body
 		player_in_attack_range = true
 		print("Игрок в зоне атаки")
 
 func _on_attack_area_exited(body):
-	if body.is_in_group("player") and body == player:
+	if body.is_in_group("player"):
+		player = body
 		player_in_attack_range = false
 		print("Игрок вышел из зоны атаки")
+		
+func take_damage(damage: int):
+	if is_dead:
+		return
+	anim_sprite.stop()
+	if current_health == null:
+		current_health = 100
+	
+	current_health = current_health - damage
+	anim_sprite.play("Hurt")
+	print("Враг получил урон: ", damage, " Здоровье: ", current_health)
+	
+	if current_health <= 0:
+		die()
 
 func attack():
-	can_attack = false
+	if is_dead:
+		return
+	
+	can_attack = false	
 	
 	# Анимация атаки
 	anim_sprite.play("Attack")
@@ -138,5 +167,24 @@ func attack():
 		print("ОШИБКА: player = null")
 	
 	# Перезарядка
-	await get_tree().create_timer(attack_cooldown).timeout
+	await get_tree().create_timer(0.5).timeout
 	can_attack = true
+
+func die():
+	if is_dead:
+		return
+	is_dead = true  # ПЕРВОЕ действие - ставим флаг!
+	
+	# Останавливаем все процессы
+	set_physics_process(false)  # Отключаем физику
+	set_process(false)  # Отключаем _process (если используется)
+	
+	# Убираем коллизии
+	collision_layer = 0
+	collision_mask = 0
+	
+	# Проигрываем анимацию смерти
+	anim_sprite.play("Dead")
+	
+	await get_tree().create_timer(1).timeout  # Остановка через 1 секунду
+	anim_sprite.pause()

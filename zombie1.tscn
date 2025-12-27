@@ -148,7 +148,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
-"speed": 6.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -254,7 +254,7 @@ height = 48.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xkcb"]
 size = Vector2(22.857143, 24.285717)
 
-[node name="Zombie1" type="CharacterBody2D"]
+[node name="Zombie1" type="CharacterBody2D" groups=["enemy"]]
 scale = Vector2(0.7, 0.7)
 collision_layer = 2
 collision_mask = 5
@@ -264,7 +264,7 @@ script = ExtResource("1_nyjei")
 position = Vector2(2, -64)
 sprite_frames = SubResource("SpriteFrames_fjscq")
 animation = &"Attack"
-frame_progress = 0.89671063
+frame_progress = 0.22634743
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -28)

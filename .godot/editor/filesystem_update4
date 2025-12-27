@@ -1,5 +1,7 @@
-res://Gpunk.tscn
-res://main.gdshader
-res://camera_2d.gd
-res://gpunk.gd
 res://main.tscn
+res://main.gdshader
+res://Gpunk.tscn
+res://gpunk.gd
+res://zombie_1.gd
+res://zombie1.tscn
+res://test_enemy.gd

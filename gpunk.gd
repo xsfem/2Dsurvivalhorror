@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 # Параметры движения
 const WALK_SPEED = 35.0
-const RUN_SPEED = 60.0
+const RUN_SPEED = 150.0
 const ACCELERATION = 1500.0
 const FRICTION = 1200.0
 
 
-@export var max_health = 100
-var current_health = max_health
+var current_health = 100
+@export var attack_cooldown = 1.5
+var is_hurt = false
 
 # Гравитация
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -17,10 +18,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_running = false
 var is_attacking = false
 var attack_type = ""
+var enemy = null
+var enemy_in_attack_range = false
+var can_attack = true
 
 # Узлы
 @onready var anim_sprite = $AnimatedSprite2D
-@onready var attack_area = $AttackArea
+@onready var attack_area2d = $AttackArea2D
 @onready var camera = get_node("Camera2D")
 
 # Рандомайзер легких аттак анимаций
@@ -30,7 +34,13 @@ var animations_light_attacks = animations.pick_random()
 
 func _ready():
 	add_to_group("player")
-	current_health = max_health
+	
+	if attack_area2d:
+		print("AttackArea2D найдена")
+		attack_area2d.body_entered.connect(_on_attack_area_entered)
+		attack_area2d.body_exited.connect(_on_attack_area_exited)
+	else:
+		print("ОШИБКА: AttackArea не найдена!")
 
 func _physics_process(delta):
 	# Применяем гравитацию
@@ -38,9 +48,11 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	
 	# Если атакуем, блокируем движение
-	if is_attacking:
+	if is_hurt or is_attacking:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 		move_and_slide()
+		await get_tree().create_timer(0.5).timeout
+		is_hurt = false
 		return
 	
 	# Атаки
@@ -89,6 +101,7 @@ func perform_attack(type: String):
 	
 	if type == "light":
 		anim_sprite.play(animations_light_attacks)
+		deal_damage()
 		await get_tree().create_timer(0.5).timeout
 	else:
 		anim_sprite.play("Attack2")
@@ -98,20 +111,65 @@ func perform_attack(type: String):
 
 # Этот метод можно вызвать из AnimationPlayer для нанесения урона
 func deal_damage():
-	var damage = 10 if attack_type == "light" else 25
+	can_attack = false
+	
+	is_attacking = true
+	var damage = 50 if attack_type == "light" else 25
 	print("Урон нанесен: ", damage)
 	
-	# Здесь можно добавить логику обнаружения врагов
-	# Например, через Area2D или RayCast2D
+	# Нанесение урона
+	if enemy:
+		print("Enemy существует")
+		if enemy.has_method("take_damage"):
+			enemy.take_damage(damage)
+			print("Урон нанесён: ", damage)
+		else:
+			print("ОШИБКА: У игрока НЕТ метода take_damage!")
+	else:
+		print("ОШИБКА: player = null")
+	
+	return damage
 
 func take_damage(damage: int):
+	if current_health == null:
+		current_health = 100
+	
 	current_health -= damage
+	
+	#is_hurt = true
+	#velocity.x = 0  # Останавливаем движение
+	
+	# Проигрываем анимацию урона
 	anim_sprite.play("Hurt")
+	#await anim_sprite.animation_finished
+	
+	# Возвращаем управление
+	#is_hurt = false
 	print("Игрок получил урон: ", damage, " Здоровье: ", current_health)
 	
 	if current_health <= 0:
 		die()
+	
 
+func _on_attack_area_entered(body):
+	if body.is_in_group("enemy"):
+		enemy = body
+		enemy_in_attack_range = true
+		print("Враг в зоне атаки")
+
+func _on_attack_area_exited(body):
+	if body.is_in_group("enemy"):
+		enemy = body
+		enemy_in_attack_range = false
+		print("Враг вышел из зоны атаки")
+		
 func die():
+	# Останавливаем все процессы
+	set_physics_process(false)  # Отключаем физику
+	set_process(false)  # Отключаем _process (если используется)
+	
+	# Проигрываем анимацию смерти
 	anim_sprite.play("Die")
+	await get_tree().create_timer(1).timeout  # Остановка через 1 секунду
+	anim_sprite.pause()
 	get_tree().reload_current_scene()

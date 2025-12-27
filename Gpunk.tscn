@@ -477,10 +477,10 @@ collision_mask = 6
 script = ExtResource("1_d4lcm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -64)
+position = Vector2(1.4285715, -64.28571)
 sprite_frames = SubResource("SpriteFrames_4gv1r")
 animation = &"Hurt"
-frame_progress = 0.15421003
+frame_progress = 0.9933024
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.1920929e-07, -28.57143)
@@ -521,9 +521,12 @@ preprocess = 0.24
 speed_scale = 30.56
 process_material = SubResource("ParticleProcessMaterial_dbxoj")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="AttackArea2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
 position = Vector2(24.285715, -45.714287)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_o1u4h")
