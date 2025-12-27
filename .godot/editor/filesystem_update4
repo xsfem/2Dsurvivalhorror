@@ -1,10 +1,5 @@
-res://main.tscn
-res://zombie1.tscn
-res://gpunk.gd
-res://zombie_1.gd
-res://color_rect.gd
-res://main.gdshader
-res://canvas_layer.gd
 res://Gpunk.tscn
-res://bad_camera.gd
-res://badcamera.gd
+res://main.gdshader
+res://camera_2d.gd
+res://gpunk.gd
+res://main.tscn

@@ -21,6 +21,7 @@ var attack_type = ""
 # Узлы
 @onready var anim_sprite = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
+@onready var camera = get_node("Camera2D")
 
 # Рандомайзер легких аттак анимаций
 var animations = ["Attack1", "Attack1_L"]
@@ -59,6 +60,13 @@ func _physics_process(delta):
 	if direction != 0:
 		velocity.x = move_toward(velocity.x, direction * current_speed, ACCELERATION * delta)
 		anim_sprite.flip_h = direction < 0
+		
+		# Плавный поворот камеры при повороте с x:40 до x:-40 в рамках 1.75 секунд
+		if direction > 0:
+			camera.smooth_offset(40,1.75)
+		if direction < 0:
+			camera.smooth_offset(-40,1.75) 
+		
 		
 		# Анимации движения (только если не прыгаем и не атакуем)
 		if is_on_floor() and not is_attacking:
@@ -103,7 +111,6 @@ func take_damage(damage: int):
 	
 	if current_health <= 0:
 		die()
-
 
 func die():
 	anim_sprite.play("Die")
