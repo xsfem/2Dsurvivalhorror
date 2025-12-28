@@ -5,7 +5,7 @@ const CHASE_SPEED = 50.0
 const DETECTION_RANGE = 300.0
 
 # Параметры атаки
-@export var attack_damage = 25
+@export var attack_damage = randi_range(15, 25)
 
 # Здоровье
 @export var max_health = 100
@@ -18,6 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_chasing = false
 var player = null
 var is_dead = false
+var is_hurt = false
 
 # Состояния атаки
 var can_attack = true
@@ -74,7 +75,7 @@ func _physics_process(delta):
 			# Остановка и атака
 			velocity.x = 0
 			print("УСЛОВИЕ АТАКИ ВЫПОЛНЕНО")
-			if can_attack:
+			if can_attack and is_hurt == false:
 				print("ВЫЗОВ АТАКИ")
 				attack()
 			else:
@@ -133,16 +134,22 @@ func _on_attack_area_exited(body):
 		print("Игрок вышел из зоны атаки")
 		
 func take_damage(damage: int):
+	is_hurt = true
+	
 	if is_dead:
 		return
-	anim_sprite.stop()
+	
 	if current_health == null:
 		current_health = 100
+	
+	anim_sprite.stop()
+	velocity.x = 0
 	
 	current_health = current_health - damage
 	anim_sprite.play("Hurt")
 	print("Враг получил урон: ", damage, " Здоровье: ", current_health)
 	
+	is_hurt = false
 	if current_health <= 0:
 		die()
 
@@ -159,6 +166,7 @@ func attack():
 	if player:
 		print("Игрок существует")
 		if player.has_method("take_damage"):
+			await get_tree().create_timer(0.2).timeout
 			player.take_damage(attack_damage)
 			print("Урон нанесён: ", attack_damage)
 		else:

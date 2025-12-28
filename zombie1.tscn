@@ -264,7 +264,7 @@ script = ExtResource("1_nyjei")
 position = Vector2(2, -64)
 sprite_frames = SubResource("SpriteFrames_fjscq")
 animation = &"Attack"
-frame_progress = 0.9642191
+frame_progress = 0.42425454
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -28)
@@ -274,6 +274,7 @@ shape = SubResource("CapsuleShape2D_238gw")
 position = Vector2(1.9999996, -63.99999)
 scale = Vector2(0.9999998, 0.9999998)
 stream = ExtResource("7_4xkcb")
+volume_db = -80.0
 parameters/looping = true
 
 [node name="DetectionArea" type="Area2D" parent="."]

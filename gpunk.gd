@@ -101,21 +101,20 @@ func perform_attack(type: String):
 	
 	if type == "light":
 		anim_sprite.play(animations_light_attacks)
-		deal_damage()
+		deal_damage(25)
 		await get_tree().create_timer(0.5).timeout
 	else:
 		anim_sprite.play("Attack2")
+		deal_damage(50)
+		await get_tree().create_timer(1).timeout
 	
 	# Ждем окончания анимации атаки 0.5 секунд
 	is_attacking = false
 
 # Этот метод можно вызвать из AnimationPlayer для нанесения урона
-func deal_damage():
+func deal_damage(damage: int):
 	can_attack = false
-	
 	is_attacking = true
-	var damage = 50 if attack_type == "light" else 25
-	print("Урон нанесен: ", damage)
 	
 	# Нанесение урона
 	if enemy:
@@ -127,8 +126,6 @@ func deal_damage():
 			print("ОШИБКА: У игрока НЕТ метода take_damage!")
 	else:
 		print("ОШИБКА: player = null")
-	
-	return damage
 
 func take_damage(damage: int):
 	if current_health == null:
@@ -170,6 +167,6 @@ func die():
 	
 	# Проигрываем анимацию смерти
 	anim_sprite.play("Die")
-	await get_tree().create_timer(1).timeout  # Остановка через 1 секунду
-	anim_sprite.pause()
+	#await get_tree().create_timer(1).timeout  # Остановка через 1 секунду
+	#anim_sprite.pause()
 	get_tree().reload_current_scene()
